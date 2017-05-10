@@ -1695,6 +1695,11 @@
 					<field name="NUM">30</field>
 				</shadow>
 			</value>
+			<value name="speed">
+				<shadow type="math_number">
+					<field name="NUM">30</field>
+				</shadow>
+			</value>
 		</block>
 		<block type="MRduino_back">
 			<value name="PWM">
@@ -1778,14 +1783,24 @@
 		<block type="MRduino_forward_mm">
 			<value name="PWM">
 				<shadow type="math_number">
-					<field name="NUM">5</field>
+					<field name="NUM">40</field>
+				</shadow>
+			</value>
+			<value name="VITESSE">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
 				</shadow>
 			</value>
 		</block>
 		<block type="MRduino_back_mm">
 			<value name="PWM">
 				<shadow type="math_number">
-					<field name="NUM">5</field>
+					<field name="NUM">40</field>
+				</shadow>
+			</value>
+			<value name="VITESSE">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
 				</shadow>
 			</value>
 		</block>
@@ -1795,11 +1810,21 @@
 					<field name="NUM">90</field>
 				</shadow>
 			</value>
+			<value name="VITESSE">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
+				</shadow>
+			</value>
 		</block>
 		<block type="MRduino_turnRight_degree">
 			<value name="PWM">
 				<shadow type="math_number">
 					<field name="NUM">90</field>
+				</shadow>
+			</value>
+			<value name="VITESSE">
+				<shadow type="math_number">
+					<field name="NUM">10</field>
 				</shadow>
 			</value>
 		</block>

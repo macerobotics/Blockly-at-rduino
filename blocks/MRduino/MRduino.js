@@ -87,14 +87,35 @@ Blockly.Blocks['MRduino_forward'] = {
 
 Blockly.Blocks['MRduino_forward_mm'] = {
   init: function() {
-    this.setColour("#ee5411");
-	this.appendValueInput("PWM", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
+    this.setColour("#00979D");
+    this.setHelpUrl("");
+    this.appendValueInput("PWM", 'Number')
+        .setCheck("Number")
         .appendField(Blockly.Msg.MRduino_forward_mm);
+    this.appendValueInput("VITESSE", 'Number')
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MRduino_forward_mm_speed);
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.MBOT_MOTOR_TOOLTIP);
+    this.setTooltip('MRduino_forward_mm');
+  }
+};
+
+Blockly.Blocks['MRduino_back_mm'] = {
+  init: function() {
+    this.setColour("#00979D");
+    this.setHelpUrl("");
+    this.appendValueInput("PWM", 'Number')
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MRduino_back_mm);
+    this.appendValueInput("VITESSE", 'Number')
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MRduino_back_mm_speed);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('MRduino_back_mm');
   }
 };
 
@@ -125,18 +146,7 @@ Blockly.Blocks['MRduino_forward_mm'] = {
   }
 };
 
-Blockly.Blocks['MRduino_back_mm'] = {
-  init: function() {
-    this.setColour("#ee5411");
-	this.appendValueInput("PWM", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.MRduino_back_mm);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.MBOT_MOTOR_TOOLTIP);
-  }
-};
+
 
  Blockly.Blocks['MRduino_turnLeft'] = {
   init: function() {
@@ -153,29 +163,37 @@ Blockly.Blocks['MRduino_back_mm'] = {
 
  Blockly.Blocks['MRduino_turnLeft_degree'] = {
   init: function() {
-    this.setColour("#ee5411");
-	this.appendValueInput("PWM", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
+    this.setColour("#00979D");
+    this.setHelpUrl("");
+    this.appendValueInput("PWM", 'Number')
+        .setCheck("Number")
         .appendField(Blockly.Msg.MRduino_turnLeft_degree);
+    this.appendValueInput("VITESSE", 'Number')
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MRduino_turnLeft_degree_speed);
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.MBOT_MOTOR_TOOLTIP);
+    this.setTooltip('MRduino_turnLeft_degree');
   }
-};
+};;
 
  Blockly.Blocks['MRduino_turnRight_degree'] = {
   init: function() {
-    this.setColour("#ee5411");
-	this.appendValueInput("PWM", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
+    this.setColour("#00979D");
+    this.setHelpUrl("");
+    this.appendValueInput("PWM", 'Number')
+        .setCheck("Number")
         .appendField(Blockly.Msg.MRduino_turnRight_degree);
+    this.appendValueInput("VITESSE", 'Number')
+        .setCheck("Number")
+        .appendField(Blockly.Msg.MRduino_turnRight_degree_speed);
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip(Blockly.Msg.MBOT_MOTOR_TOOLTIP);
+    this.setTooltip('MRduino_turnRight_degree');
   }
-};
+};;
 
  Blockly.Blocks['MRduino_turnRight'] = {
   init: function() {

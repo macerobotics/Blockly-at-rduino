@@ -19,7 +19,15 @@ Blockly.Arduino['MRduino_forward'] = function() {
 
 Blockly.Arduino['MRduino_forward_mm'] = function() {
 	var value_distance = Blockly.Arduino.valueToCode(this, 'PWM', Blockly.Arduino.ORDER_ATOMIC);
-	var code='forward_mm(10,'+value_distance+'*10);\n';
+	var value_speed = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
+	var code='forward_mm('+value_speed+','+value_distance+'*10);\n';
+	return code;
+};
+
+Blockly.Arduino['MRduino_back_mm'] = function() {
+	var value_distance = Blockly.Arduino.valueToCode(this, 'PWM', Blockly.Arduino.ORDER_ATOMIC);
+	var value_speed = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
+	var code='back_mm('+value_speed+','+value_distance+'*10);\n';
 	return code;
 };
 
@@ -44,12 +52,6 @@ Blockly.Arduino['MRduino_back'] = function() {
     return code;
 };
 
-Blockly.Arduino['MRduino_back_mm'] = function() {
-    var value_distance = Blockly.Arduino.valueToCode(this, 'PWM', Blockly.Arduino.ORDER_ATOMIC);
-	var code='back_mm(10,'+value_distance+'*10);\n';
-    return code;
-};
-
 Blockly.Arduino['MRduino_turnLeft'] = function() {
     var value_speed = Blockly.Arduino.valueToCode(this, 'PWM', Blockly.Arduino.ORDER_ATOMIC);
 	var code='turnLeft('+value_speed+');\n';
@@ -58,13 +60,15 @@ Blockly.Arduino['MRduino_turnLeft'] = function() {
 
 Blockly.Arduino['MRduino_turnLeft_degree'] = function() {
     var value_angle = Blockly.Arduino.valueToCode(this, 'PWM', Blockly.Arduino.ORDER_ATOMIC);
-	var code='turnLeft_degree(10,'+value_angle+');\n';
+	var value_speed = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
+	var code='turnLeft_degree('+value_speed+','+value_angle+');\n';
     return code;
 };
 
 Blockly.Arduino['MRduino_turnRight_degree'] = function() {
     var value_angle = Blockly.Arduino.valueToCode(this, 'PWM', Blockly.Arduino.ORDER_ATOMIC);
-	var code='turnRight_degree(10,'+value_angle+');\n';
+	var value_speed = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
+	var code='turnRight_degree('+value_speed+','+value_angle+');\n';
     return code;
 };
 
